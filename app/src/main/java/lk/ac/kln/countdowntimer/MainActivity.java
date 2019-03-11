@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         if(savedInstanceState!=null){
             counter=savedInstanceState.getInt(CURRENT_COUNTER);
-      } countDown();
+      } running=true;
     }
     @Override
 
@@ -46,5 +46,10 @@ public class MainActivity extends AppCompatActivity {
 
             }
     });
+    }
+    @Override
+    public void onStop(){
+        super.onStop();
+    }
 }
-}
+
